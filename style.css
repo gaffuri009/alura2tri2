@@ -1,0 +1,376 @@
+/* ==========================
+   IMPORTAÇÃO DA FONTE
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==========================
+   CORES
+========================== */
+
+:root{
+
+    --cor-fundo:#090B16;
+    --cor-caixa:#12172C;
+
+    --cor-principal:#1F2947;
+    --cor-secundaria:#2E3D67;
+
+    --cor-destaque:#46D4FF;
+
+    --cor-texto:#F2F2F2;
+
+}
+
+/* ==========================
+   CONFIGURAÇÕES GERAIS
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+
+    background:var(--cor-fundo);
+
+    color:var(--cor-texto);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+
+    padding:20px;
+
+}
+
+/* ==========================
+   CAIXA PRINCIPAL
+========================== */
+
+.caixa-principal{
+
+    width:100%;
+    max-width:900px;
+
+    background:var(--cor-caixa);
+
+    padding:45px;
+
+    border-radius:20px;
+
+    box-shadow:0 0 35px rgba(0,0,0,.45);
+
+    animation:entrada .7s;
+
+}
+
+/* ==========================
+   ANIMAÇÃO
+========================== */
+
+@keyframes entrada{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================
+   BARRA DE PROGRESSO
+========================== */
+
+.progresso{
+
+    width:100%;
+    height:12px;
+
+    background:#2A3150;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    margin-bottom:35px;
+
+}
+
+#barra{
+
+    width:0%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        #46D4FF,
+        #00FFD5
+    );
+
+    transition:.5s;
+
+}
+
+/* ==========================
+   TÍTULO
+========================== */
+
+h1{
+
+    text-align:center;
+
+    color:var(--cor-destaque);
+
+    font-size:2.3rem;
+
+    margin-bottom:30px;
+
+}
+
+/* ==========================
+   PERGUNTA
+========================== */
+
+.pergunta{
+
+    font-size:1.2rem;
+
+    text-align:center;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+/* ==========================
+   BOTÕES
+========================== */
+
+.alternativas{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.alternativas button{
+
+    background:var(--cor-principal);
+
+    color:var(--cor-destaque);
+
+    border:none;
+
+    border-radius:16px;
+
+    padding:18px;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    transition:.35s;
+
+}
+
+.alternativas button:hover{
+
+    background:var(--cor-destaque);
+
+    color:var(--cor-caixa);
+
+    transform:scale(1.03);
+
+}
+
+.alternativas button:active{
+
+    transform:scale(.98);
+
+}
+
+/* ==========================
+   RESULTADO
+========================== */
+
+.resultado{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.88);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+}
+
+.resultado-caixa{
+
+    background:var(--cor-caixa);
+
+    max-width:800px;
+
+    width:100%;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    text-align:center;
+
+    animation:entrada .5s;
+
+}
+
+.resultado h2{
+
+    color:var(--cor-destaque);
+
+    margin-bottom:25px;
+
+    font-size:2rem;
+
+}
+
+#textoResultado{
+
+    line-height:1.8;
+
+    font-size:1.1rem;
+
+    margin-bottom:35px;
+
+}
+
+/* ==========================
+   BOTÃO REINICIAR
+========================== */
+
+#reiniciar{
+
+    background:var(--cor-destaque);
+
+    color:var(--cor-caixa);
+
+    border:none;
+
+    border-radius:15px;
+
+    padding:16px 35px;
+
+    font-size:1rem;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#reiniciar:hover{
+
+    background:#8CE8FF;
+
+    transform:scale(1.05);
+
+}
+
+/* ==========================
+   CLASSE ESCONDIDO
+========================== */
+
+.escondido{
+
+    display:none;
+
+}
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+
+@media(max-width:768px){
+
+    .caixa-principal{
+
+        padding:30px;
+
+    }
+
+    h1{
+
+        font-size:1.8rem;
+
+    }
+
+    .pergunta{
+
+        font-size:1.05rem;
+
+    }
+
+    .alternativas button{
+
+        font-size:.95rem;
+
+        padding:16px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .caixa-principal{
+
+        padding:22px;
+
+    }
+
+    h1{
+
+        font-size:1.5rem;
+
+    }
+
+    .pergunta{
+
+        font-size:1rem;
+
+    }
+
+    .resultado-caixa{
+
+        padding:25px;
+
+    }
+
+}

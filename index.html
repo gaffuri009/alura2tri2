@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Você Decide Seu Futuro</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="caixa-principal">
+
+        <!-- Barra de progresso -->
+        <div class="progresso">
+            <div id="barra"></div>
+        </div>
+
+        <!-- Conteúdo -->
+        <section class="conteudo">
+
+            <h1>Você decide seu futuro</h1>
+
+            <p id="pergunta" class="pergunta">
+                Carregando pergunta...
+            </p>
+
+            <div id="alternativas" class="alternativas">
+                <!-- Os botões serão criados pelo JavaScript -->
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Tela Final -->
+    <section id="resultado" class="resultado escondido">
+
+        <div class="resultado-caixa">
+
+            <h2>Seu Resultado</h2>
+
+            <p id="textoResultado"></p>
+
+            <button id="reiniciar">
+                Recomeçar
+            </button>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
